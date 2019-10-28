@@ -96,15 +96,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    ;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 		//HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 		//HAL_Delay(1000);
-		if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin))
-			HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
-		else 
- 			HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+		//if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin))
+			//HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+		//else 
+ 			//HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
   }
   /* USER CODE END 3 */
 }
@@ -208,7 +209,21 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+/**
+  * @brief EXTI line detection callbacks
+  * @param GPIO_Pin: Specifies the pins connected EXTI line
+  * @retval None
+  */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == B1_Pin)
+  {
+    /* Toggle LED1 */
+		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+  } 
+	else 
+		__NOP();
+}
 /* USER CODE END 4 */
 
 /**
