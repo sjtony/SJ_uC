@@ -26,3 +26,5 @@ gpiotest\stm32l0xx_hal_flash_ramfunc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm3
 gpiotest\stm32l0xx_hal_flash_ramfunc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h
 gpiotest\stm32l0xx_hal_flash_ramfunc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h
 gpiotest\stm32l0xx_hal_flash_ramfunc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h
+gpiotest\stm32l0xx_hal_flash_ramfunc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim.h
+gpiotest\stm32l0xx_hal_flash_ramfunc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h
